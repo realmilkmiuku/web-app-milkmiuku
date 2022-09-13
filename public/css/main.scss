@@ -1959,7 +1959,7 @@ section.activities-page {
      }
  
      p {
-         color: white;
+         
          line-height: 1.6;
          text-align: left;
      }
@@ -1997,9 +1997,16 @@ section.activities-page {
             opacity: 0.3;
         }
     }
+
 }
 
 section.aa1 {
+
+
+    .cer {
+        color: yellow;
+    }
+
 
     .rows {
         margin-top: 3em;
@@ -2032,8 +2039,13 @@ section.aa1 {
  
      img.aa-bb-img2   {
          margin-top: 10px;
-       
      }
+
+     img.cer-aa-bb {
+        width: 10%;
+        height: 100%;
+        visibility: hidden;
+    }
 
 }
 
