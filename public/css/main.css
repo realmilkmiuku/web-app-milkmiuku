@@ -1769,7 +1769,6 @@ section.activities-page h2.topic {
   color: white;
 }
 section.activities-page p {
-  color: white;
   line-height: 1.6;
   text-align: left;
 }
@@ -1801,6 +1800,9 @@ section.activities-page img:hover {
   opacity: 0.3;
 }
 
+section.aa1 .cer {
+  color: yellow;
+}
 section.aa1 .rows {
   margin-top: 3em;
 }
@@ -1826,6 +1828,11 @@ section.aa1 .sub-column img {
 }
 section.aa1 img.aa-bb-img2 {
   margin-top: 10px;
+}
+section.aa1 img.cer-aa-bb {
+  width: 10%;
+  height: 100%;
+  visibility: hidden;
 }
 
 section.aa2 .sub-rows {
