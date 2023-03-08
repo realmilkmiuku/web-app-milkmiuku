@@ -10,6 +10,7 @@
   --secondary: #FBD25D;
   --primary_bg-color: #F6F6F6;
   --secondary_bg-color: #1E1E1E;
+  --opacityw-bg-color: #F6F6F673;
   --th-blue:#0C7BD8;
   --th-sky:#2FBBDC;
   --th-green:#4DCD8B;
@@ -33,15 +34,16 @@
 }
 
 .transition-bg-w-to-w {
-  height: 1000vh;
-  background: -webkit-linear-gradient(bottom, var(--primary_bg-color), var(--cleropacity));
-  background-image: -o-linear-gradient(bottom, var(--primary_bg-color), var(--cleropacity));
-  background: linear-gradient(to top, var(--primary_bg-color), var(--cleropacity));
+  height: 18vh;
+  margin-bottom: 72px;
+  background: -webkit-linear-gradient(bottom, var(--opacityw-bg-color), var(--cleropacity));
+  background-image: -o-linear-gradient(bottom, var(--opacityw-bg-color), var(--cleropacity));
+  background: linear-gradient(to top, var(--opacityw-bg-color), var(--cleropacity));
 }
 
 .transition-bg-w-to-w2 {
-  height: 700vh;
-  background-image: linear-gradient(to top, var(--cleropacity), var(--primary_bg-color));
+  height: 100vh;
+  background-image: linear-gradient(to top, var(--cleropacity), var(--opacityw-bg-color));
 }
 
 #arrow a {
@@ -58,23 +60,8 @@
   border-left: 1.5px solid white;
   border-bottom: 1.5px solid white;
   transform: rotate(-45deg);
-  -webkit-animation: sdb05 1.5s infinite;
   animation: effarrow 1.5s infinite;
   box-sizing: border-box;
-}
-
-@-webkit-keyframes effarrow {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
 }
 @keyframes effarrow {
   0% {
@@ -86,26 +73,6 @@
   }
   100% {
     transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fadeAway {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0.9;
-  }
-  40% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 0.3;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
     opacity: 0;
   }
 }
@@ -256,6 +223,27 @@ h1.topic {
   color: var(--ctext);
 }
 
+.box-error {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 3em;
+}
+
+.code {
+  color: white;
+  text-align: center;
+}
+
+.no.code {
+  color: white;
+  font-size: 100px;
+}
+
+.subtext.code {
+  margin-top: -15px;
+}
+
 h2.topic {
   margin-top: 3em;
   font-size: 22px;
@@ -316,8 +304,7 @@ a {
   width: 100%;
   height: 100vh;
   z-index: -1;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
   /*  overflow: hidden; */
 }
 
@@ -332,8 +319,7 @@ a {
   width: 100%;
   height: 100vh;
   z-index: -1;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
   /*  overflow: hidden; */
 }
 
@@ -378,19 +364,10 @@ a {
 .profile-img:hover .box-hi {
   opacity: 1;
   transform: scale(0.9);
-  -webkit-animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards alternate;
-          animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards alternate;
+  animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards alternate;
 }
 
 /* source https://codepen.io/kylewetton/pen/yLBwdJX */
-@-webkit-keyframes bopB {
-  0% {
-    transform: scale(0.9);
-  }
-  80%, 100% {
-    transform: scale(1) rotateZ(-3deg);
-  }
-}
 @keyframes bopB {
   0% {
     transform: scale(0.9);
@@ -414,24 +391,6 @@ a {
   }
   50% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes introLoad {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 @keyframes introLoad {
@@ -477,22 +436,16 @@ nav ul a {
 nav ul a:hover {
   content: "";
   text-decoration-thickness: 2px;
-  -webkit-text-decoration-style: wavy;
-          text-decoration-style: wavy;
-  -webkit-text-decoration-color: white;
-          text-decoration-color: white;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: white;
+  text-decoration-line: underline;
 }
 nav ul a.active {
   content: "";
   text-decoration-thickness: 2px;
-  -webkit-text-decoration-style: wavy;
-          text-decoration-style: wavy;
-  -webkit-text-decoration-color: var(--th-yellow);
-          text-decoration-color: var(--th-yellow);
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--th-yellow);
+  text-decoration-line: underline;
 }
 nav .close {
   float: right;
@@ -621,10 +574,10 @@ footer .box .icon-github {
 footer .box .icon-github :hover {
   fill: var(--th-yellow);
 }
-footer .box .icon-ig {
+footer .box .icon-linkedin {
   fill: var(--secondary_bg-color);
 }
-footer .box .icon-ig :hover {
+footer .box .icon-linkedin :hover {
   fill: var(--th-orage);
 }
 
@@ -648,24 +601,14 @@ footer.for-body-black .icon-mail {
 footer.for-body-black .icon-github {
   fill: white;
 }
-footer.for-body-black .icon-ig {
+footer.for-body-black .icon-linkedin {
   fill: white;
 }
 
 section.hero {
   color: white;
   height: 49vh;
-  -webkit-animation: moveDown 10s ease-in-out forwards;
-          animation: moveDown 10s ease-in-out forwards;
-}
-@-webkit-keyframes wavyhand {
-  0% {
-    transform: translateY(0px);
-  }
-  15% {
-    transform: translateY(-15px);
-    transform: translateX(-20px);
-  }
+  animation: moveDown 10s ease-in-out forwards;
 }
 @keyframes wavyhand {
   0% {
@@ -701,8 +644,7 @@ section.hero .box-hero-small h1.h1-d {
   margin-top: -1.2em;
 }
 section.hero .box-hero-small span.hand {
-  -webkit-animation: wavyhand 2s linear infinite;
-          animation: wavyhand 2s linear infinite;
+  animation: wavyhand 2s linear infinite;
 }
 section.hero .boxn-hero-large {
   display: none;
@@ -734,7 +676,6 @@ section.hero .boxn-hero-small h1.h1-l {
 .element {
   position: relative;
   margin: 0 auto;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -791,15 +732,6 @@ svg.left-gcircle {
   stroke: var(--secondary_bg-color);
 }
 
-@-webkit-keyframes spinInplace {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-
 @keyframes spinInplace {
   from {
     transform: rotate(0deg);
@@ -809,56 +741,45 @@ svg.left-gcircle {
   }
 }
 .spiningInplace {
-  -webkit-animation-name: spinInplace;
-          animation-name: spinInplace;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: spinInplace;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 
 .hover-white:hover {
   fill: white;
-  -webkit-animation: spinInplace 0.5s linear 0.5;
-          animation: spinInplace 0.5s linear 0.5;
+  animation: spinInplace 0.5s linear 0.5;
 }
 
 .hover-blue:hover {
   fill: var(--th-blue);
-  -webkit-animation: spinInplace 0.5s linear 0.5;
-          animation: spinInplace 0.5s linear 0.5;
+  animation: spinInplace 0.5s linear 0.5;
 }
 
 .hover-sky:hover {
   fill: var(--th-sky);
-  -webkit-animation: spinInplace 0.5s linear 0.5;
-          animation: spinInplace 0.5s linear 0.5;
+  animation: spinInplace 0.5s linear 0.5;
 }
 
 .hover-green:hover {
   fill: var(--th-green);
-  -webkit-animation: spinInplace 0.5s linear 0.5;
-          animation: spinInplace 0.5s linear 0.5;
+  animation: spinInplace 0.5s linear 0.5;
 }
 
 .hover-yellow:hover {
   fill: var(--th-yellow);
-  -webkit-animation: spinInplace 0.5s linear 0.5;
-          animation: spinInplace 0.5s linear 0.5;
+  animation: spinInplace 0.5s linear 0.5;
 }
 
 .hover-orage:hover {
   fill: var(--th-orage);
-  -webkit-animation: spinInplace 0.5s linear 0.5;
-          animation: spinInplace 0.5s linear 0.5;
+  animation: spinInplace 0.5s linear 0.5;
 }
 
 .hover-red:hover {
   fill: var(--th-red);
-  -webkit-animation: spinInplace 0.5s linear 0.5;
-          animation: spinInplace 0.5s linear 0.5;
+  animation: spinInplace 0.5s linear 0.5;
 }
 
 .hover-stroke-b:hover:hover {
@@ -985,7 +906,6 @@ section.projects-part .rows-column ul a:hover {
   color: var(--th-blue);
 }
 section.projects-part .column.left {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   z-index: 2;
@@ -1084,16 +1004,7 @@ section.projects-part .animate {
   -webkit-animation-name: animate;
   -webkit-animation-duration: 1s;
   animation-name: animate;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-@-webkit-keyframes animate {
-  from {
-    transform: scale(1.1) rotateY(10deg);
-  }
-  to {
-    transform: scale(1) rotateY(0deg);
-  }
+  animation-duration: 2s;
 }
 @keyframes animate {
   from {
@@ -1623,16 +1534,7 @@ section.pj5 .slide:nth-of-type(6) {
 }
 
 /* source shine https://codepen.io/anandchakru/pen/qxrVOE */
-@-webkit-keyframes shine {
-  0% {
-    background-position: top left;
-  }
-  100% {
-    background-position: top right;
-  }
-}
 .shining {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   background: var(--ctext) -webkit-gradient(linear, left top, right top, from(var(--ctext)), to(var(--ctext)), color-stop(0.5, #767676)) 0 0 no-repeat;
@@ -1642,21 +1544,6 @@ section.pj5 .slide:nth-of-type(6) {
   -webkit-animation-name: shine;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes spin {
-  0%, 100% {
-    transform: translate(0);
-  }
-  25% {
-    transform: translate(160%);
-  }
-  50% {
-    transform: translate(160%, 160%);
-  }
-  75% {
-    transform: translate(0, 160%);
-  }
 }
 
 @keyframes spin {
@@ -1733,24 +1620,20 @@ body.haadphuok-ref .loader-frame .loader hr {
   height: 40%;
   position: absolute;
   border-radius: 50%;
-  -webkit-animation: spin 2s ease infinite;
-          animation: spin 2s ease infinite;
+  animation: spin 2s ease infinite;
   opacity: 1;
 }
 body.haadphuok-ref .loader-frame .loader :first-child {
   background: var(--th-green);
-  -webkit-animation-delay: -1.5s;
-          animation-delay: -1.5s;
+  animation-delay: -1.5s;
 }
 body.haadphuok-ref .loader-frame .loader :nth-child(2) {
   background: var(--th-red);
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
+  animation-delay: -1s;
 }
 body.haadphuok-ref .loader-frame .loader :nth-child(3) {
   background: var(--th-yellow);
-  -webkit-animation-delay: -0.5s;
-          animation-delay: -0.5s;
+  animation-delay: -0.5s;
 }
 body.haadphuok-ref .loader-frame .loader :last-child {
   background: var(--th-blue);
@@ -1930,15 +1813,15 @@ section.aa5 .sub-column {
 .aboutme-page #arrow a span {
   top: 80vh;
 }
-.aboutme-page h2.topic {
-  color: var(--ctext);
+.aboutme-page h2.second {
+  margin-top: 50px;
 }
-.aboutme-page p.topic {
+.aboutme-page p.stopic {
   margin-top: 5px;
-}
-.aboutme-page p.topic.tech {
-  margin-top: 20px;
-  margin-bottom: 5px;
+  color: var(--ctext);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--ctext);
+  font-weight: bolder;
 }
 .aboutme-page p.summary {
   text-indent: 1.5em;
@@ -1946,6 +1829,19 @@ section.aa5 .sub-column {
 .aboutme-page p {
   text-align: left;
   line-height: 1.6;
+}
+.aboutme-page p.stopic.tech {
+  margin-top: -15px;
+  margin-bottom: 5px;
+}
+.aboutme-page p.stopic.strength {
+  margin-top: 15px;
+}
+.aboutme-page p.edu {
+  margin-top: -15px;
+}
+.aboutme-page .rowscontact {
+  margin-top: -15px;
 }
 .aboutme-page .add-detail {
   margin-top: -15px;
@@ -1988,7 +1884,7 @@ section.aa5 .sub-column {
   z-index: 1;
   position: block;
   margin-top: 5em;
-  margin-bottom: 5em;
+  margin-bottom: 10em;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
@@ -2057,7 +1953,7 @@ section.aa5 .sub-column {
 }
 .aboutme-page .contact-btn-title {
   color: var(--ctext);
-  font-size: 12px;
+  font-size: 10px;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: var(--ctext);
   font-weight: bolder;
@@ -2066,6 +1962,9 @@ section.aa5 .sub-column {
   margin: 0;
   visibility: hidden;
   transition: opactiy 0.4s, visibility 0.4s, width 0.3s, margin 0.3s;
+}
+.aboutme-page .linkcontact {
+  font-size: 10px;
 }
 .aboutme-page .contact-button:hover {
   padding: 0px 10px;
@@ -2083,15 +1982,20 @@ section.aa5 .sub-column {
   body {
     margin: 0;
   }
+  .aboutme-page p.stopic.tech {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .aboutme-page p.stopic.strength {
+    margin-top: 20px;
+  }
+  .aboutme-page p.edu {
+    margin-top: 15px;
+  }
+  .aboutme-page .rowscontact {
+    margin-top: 5px;
+  }
 } /* end of media 640 px */
-@-webkit-keyframes wavyline {
-  0% {
-    transform: translateY(0px);
-  }
-  15% {
-    transform: translateY(-5px);
-  }
-}
 @keyframes wavyline {
   0% {
     transform: translateY(0px);
@@ -2102,6 +2006,9 @@ section.aa5 .sub-column {
 }
 /* For & Taplet Desktop screen */
 @media only screen and (min-width: 900px) {
+  .transition-bg-w-to-w {
+    margin-bottom: 48px;
+  }
   .hearder-logo {
     margin-left: 2em;
   }
@@ -2153,8 +2060,7 @@ section.aa5 .sub-column {
     margin-left: 25px;
   }
   nav ul li a:hover {
-    -webkit-animation: wavyline 2s linear;
-            animation: wavyline 2s linear;
+    animation: wavyline 2s linear;
   }
   .hero-img {
     background-position-x: 0%;
@@ -2184,8 +2090,7 @@ section.aa5 .sub-column {
     margin-top: -1.3em;
   }
   section.hero .box-hero-large span.hand {
-    -webkit-animation: wavyhand 2s linear infinite;
-            animation: wavyhand 2s linear infinite;
+    animation: wavyhand 2s linear infinite;
   }
   section.hero .boxn-hero-large {
     display: block;
@@ -2248,7 +2153,7 @@ section.aa5 .sub-column {
     margin-left: -5em;
   }
   section.projects-part .previous_btn,
-section.projects-part .next_btn {
+  section.projects-part .next_btn {
     top: 30%;
   }
   section.projects-part .previous_btn {
@@ -2275,7 +2180,6 @@ section.projects-part .next_btn {
   section.activities-part h1 {
     margin-top: 4em;
     width: 310px;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     color: white;
@@ -2434,7 +2338,7 @@ section.projects-part .next_btn {
   }
   /* aboutme.html 900*/
   .aboutme-page {
-    margin-top: -4.5em;
+    margin-top: -3em;
   }
   .aboutme-page .frame-in-side {
     margin-left: 6em;
@@ -2443,10 +2347,19 @@ section.projects-part .next_btn {
   .aboutme-page p.summary {
     text-indent: 1.5em;
   }
+  .aboutme-page p.stopic.tech {
+    margin-top: 5px;
+  }
   .aboutme-page .rows {
     display: grid;
     grid-template-columns: auto 22em;
     gap: 2em;
+  }
+  .aboutme-page h2.topic {
+    margin-bottom: -5px;
+  }
+  .aboutme-page h2.topic.hcontect {
+    margin-bottom: 5px;
   }
   .aboutme-page .box-in-column {
     margin-top: 2em;
@@ -2460,7 +2373,7 @@ section.projects-part .next_btn {
   .aboutme-page .star-fill-black {
     opacity: 1;
     right: -10em;
-    margin-top: -15em;
+    margin-top: -5em;
   }
   .aboutme-page .card-img {
     margin-top: 5em;
@@ -2471,9 +2384,26 @@ section.projects-part .next_btn {
     color: var(--ctext);
     font-size: 16px;
   }
+  .aboutme-page .linkcontact {
+    font-size: 14px;
+  }
+  .subno {
+    margin-top: -70px;
+    font-size: 50px;
+  }
+  .no.code {
+    font-size: 150px;
+  }
+  .subtext.code {
+    margin-top: -30px;
+    font-size: 30px;
+  }
 } /* end of media 900 px */
 /* For & Desktop screen */
 @media only screen and (min-width: 1200px) {
+  .transition-bg-w-to-w {
+    margin-bottom: 79.5px;
+  }
   .hearder-logo {
     margin-top: 1.5em;
     margin-left: 7em;
@@ -2537,7 +2467,7 @@ section.projects-part .next_btn {
     max-width: 100%;
   }
   section.projects-part .previous_btn,
-section.projects-part .next_btn {
+  section.projects-part .next_btn {
     top: 20%;
   }
   /* end of index.html information projects part 1200*/
@@ -2654,7 +2584,6 @@ section.projects-part .next_btn {
   section.activities-page .colulmn.left p {
     margin-top: 0.5em;
     margin-left: 10px;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -2673,7 +2602,7 @@ section.projects-part .next_btn {
   }
   /* aboutme-page.html 1200 */
   .aboutme-page {
-    margin-top: -6.5em;
+    margin-top: -4.95em;
   }
   .aboutme-page .frame-in-side {
     margin-left: 15em;
@@ -2689,5 +2618,12 @@ section.projects-part .next_btn {
     margin-top: 5em;
     width: 350px;
     height: 350px;
+  }
+  .subno {
+    margin-top: -150px;
+  }
+  .no.code {
+    margin-top: 0px;
+    font-size: 230px;
   }
 } /* end of media 1200 px *//*# sourceMappingURL=main.css.map */

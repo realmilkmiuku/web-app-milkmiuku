@@ -11,6 +11,8 @@
   --primary_bg-color: #F6F6F6;
   --secondary_bg-color: #1E1E1E;
 
+  --opacityw-bg-color: #F6F6F673;
+
   --th-blue :#0C7BD8;
   --th-sky :#2FBBDC;
   --th-green:#4DCD8B;
@@ -38,16 +40,18 @@
 }
 
 .transition-bg-w-to-w {
-    height:1000vh;
-   background: -webkit-linear-gradient(bottom, var(--primary_bg-color), var(--cleropacity));
-   background-image: -moz-linear-gradient(bottom, var(--primary_bg-color), var(--cleropacity));
-   background-image: -o-linear-gradient(bottom, var(--primary_bg-color),var(--cleropacity));
-   background: linear-gradient(to top, var(--primary_bg-color), var(--cleropacity));
+    height:18vh;
+    margin-bottom: 72px;
+    background: -webkit-linear-gradient(bottom, var(--opacityw-bg-color), var(--cleropacity));
+    background-image: -moz-linear-gradient(bottom, var(--opacityw-bg-color), var(--cleropacity));
+    background-image: -o-linear-gradient(bottom, var(--opacityw-bg-color),var(--cleropacity));
+    background: linear-gradient(to top, var(--opacityw-bg-color), var(--cleropacity));
+   
 }
 
 .transition-bg-w-to-w2 {
-    height:700vh;
-    background-image: linear-gradient(to top, var(--cleropacity), var(--primary_bg-color));
+    height:100vh;
+    background-image: linear-gradient(to top, var(--cleropacity), var(--opacityw-bg-color));
 }
   
 #arrow a {
@@ -221,7 +225,6 @@ body {
     scrollbar-width: thin;
     scrollbar-color: var(--th-blue) var(--secondary_bg-color);
     transition: opactiy 0.4s, visibility 0.4s, width 0.3s, margin 0.3s;
-
     
 }
 
@@ -243,7 +246,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 6px;
 }
   
-
 .frame-in-side {
     margin: 1.5em;
 }
@@ -257,6 +259,28 @@ h1.topic {
     font-size: 28px;
     letter-spacing: 1px;
     color: var(--ctext);
+}
+
+.box-error {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 3em;
+   
+}
+
+.code {
+    color: white;
+    text-align: center;
+}
+
+.no.code {
+    color: white;
+    font-size: 100px;
+}
+
+.subtext.code {
+    margin-top: -15px;
 }
 
 h2.topic {
@@ -670,7 +694,7 @@ footer {
             }
         }
         
-        .icon-ig {
+        .icon-linkedin {
             fill: var(--secondary_bg-color);
             :hover {
                 fill: var(--th-orage);
@@ -707,7 +731,7 @@ footer.for-body-black {
         fill: white;
     }
 
-    .icon-ig {
+    .icon-linkedin {
         fill: white;
     }
 
@@ -2166,6 +2190,7 @@ section.aa5 {
 }
 
 .section {
+    
     z-index: -1;
 }
 
@@ -2176,18 +2201,16 @@ section.aa5 {
         top: 80vh;
     }
 
-    h2.topic {
-        color: var(--ctext);
+    h2.second {
+        margin-top: 50px;
     }
 
-    p.topic {
+    p.stopic {
         margin-top: 5px;
-        
-    }
-
-    p.topic.tech {
-        margin-top: 20px;
-        margin-bottom: 5px;
+        color: var(--ctext);
+        -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: var(--ctext);
+        font-weight: bolder;
     }
 
     p.summary {
@@ -2197,6 +2220,23 @@ section.aa5 {
     p {
         text-align: left;
         line-height: 1.6;
+    }
+
+    p.stopic.tech {
+        margin-top: -15px;
+        margin-bottom: 5px;
+    }
+
+    p.stopic.strength {
+        margin-top: 15px;
+    }
+
+    p.edu {
+        margin-top: -15px;
+    }
+
+    .rowscontact {
+        margin-top: -15px;
     }
 
     .add-detail {
@@ -2249,7 +2289,7 @@ section.aa5 {
         z-index: 1;
         position: block;
         margin-top: 5em;
-        margin-bottom: 5em;
+        margin-bottom: 10em;
         margin-left: auto;
         margin-right: auto;
         border-radius: 50%;
@@ -2257,6 +2297,7 @@ section.aa5 {
         height: 150px;
         background-size: cover;
     }
+
 
     .rowsicon {
         display: block;
@@ -2333,7 +2374,7 @@ section.aa5 {
 
     .contact-btn-title {
         color: var(--ctext);
-        font-size: 12px;
+        font-size: 10px;
         -webkit-text-stroke-width: .5px;
         -webkit-text-stroke-color: var(--ctext);
         font-weight: bolder;
@@ -2342,6 +2383,10 @@ section.aa5 {
         margin: 0;
         visibility: hidden;
         transition: opactiy 0.4s, visibility 0.4s, width 0.3s, margin 0.3s;
+    }
+
+    .linkcontact {
+        font-size: 10px;
     }
 
     .contact-button:hover {
@@ -2359,10 +2404,31 @@ section.aa5 {
 
 }
 
+
 /* For Tablet screen */
 @media only screen and (min-width: 640px){
     body {
         margin: 0;
+    }
+
+    .aboutme-page { 
+
+        p.stopic.tech {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        p.stopic.strength {
+            margin-top: 20px;
+        }
+    
+        p.edu {
+            margin-top: 15px;
+        }
+    
+        .rowscontact {
+            margin-top: 5px;
+        }
     }
 } /* end of media 640 px */
 
@@ -2378,6 +2444,10 @@ section.aa5 {
 
 /* For & Taplet Desktop screen */
 @media only screen and (min-width: 900px){
+
+    .transition-bg-w-to-w {
+        margin-bottom: 48px;
+    }
 
     .hearder-logo {
         margin-left: 2em;
@@ -2403,8 +2473,6 @@ section.aa5 {
         display: none;
         
     }
-
-
 
     nav {
         transform: translateX(0);
@@ -2833,7 +2901,7 @@ section.aa5 {
 
     /* aboutme.html 900*/
     .aboutme-page {
-        margin-top: -4.5em;
+        margin-top: -3em;
 
         .frame-in-side {
             margin-left: 6em;
@@ -2844,11 +2912,23 @@ section.aa5 {
             text-indent: 1.5em;
         }
 
+        p.stopic.tech {
+            margin-top: 5px;
+        }
+
         .rows {
             display: grid;
             grid-template-columns:  auto 22em;
             gap: 2em;
             //margin-bottom: 5em;
+        }
+
+        h2.topic {
+            margin-bottom: -5px;
+        }
+
+        h2.topic.hcontect {
+            margin-bottom: 5px;
         }
 
         .box-in-column {
@@ -2867,7 +2947,7 @@ section.aa5 {
         .star-fill-black {
             opacity: 1;
             right: -10em;
-            margin-top: -15em;
+            margin-top: -5em;
 
         }
 
@@ -2882,13 +2962,37 @@ section.aa5 {
             font-size: 16px; 
         }
 
+        .linkcontact {
+            font-size: 14px;
+        }
+
+
     }
+
+        .subno {
+            margin-top: -70px;
+            font-size: 50px;
+        }
+
+        .no.code {
+            font-size: 150px;
+        }
+
+        .subtext.code {
+            margin-top: -30px;
+            font-size: 30px;
+        }
 
 
 } /* end of media 900 px */
 
 /* For & Desktop screen */
 @media only screen and (min-width: 1200px){
+
+
+    .transition-bg-w-to-w {
+        margin-bottom: 79.5px;
+    }
 
     .hearder-logo {
         margin-top: 1.5em;
@@ -3168,7 +3272,7 @@ section.aa5 {
 
     /* aboutme-page.html 1200 */
     .aboutme-page { 
-        margin-top: -6.5em;
+        margin-top: -4.95em;
 
         .frame-in-side {
             margin-left: 15em;
@@ -3189,6 +3293,15 @@ section.aa5 {
             height: 350px;
 
         }
+    }
+
+    .subno {
+        margin-top: -150px;
+    }
+
+    .no.code {
+        margin-top: 0px;
+        font-size: 230px;
     }
 
 } /* end of media 1200 px */
