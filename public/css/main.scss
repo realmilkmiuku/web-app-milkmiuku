@@ -2835,7 +2835,7 @@ section.aa5 {
         }
     
         .pptx-frame-inside {
-            height: 400px;
+            height: 390px;
             padding: 10px;
             border-radius: 30px;
         }
@@ -3220,8 +3220,9 @@ section.aa5 {
         }
 
         .pptx-frame-inside {
-            height: 400px;
-            padding: 10px;
+            height: 350px;
+            padding: -30px;
+            margin-bottom: 20px;
         }
 
     }

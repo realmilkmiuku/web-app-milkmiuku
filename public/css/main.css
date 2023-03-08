@@ -2288,7 +2288,7 @@ section.aa5 .sub-column {
     margin-right: 8em;
   }
   body.haadphuok-ref .pptx-frame-inside {
-    height: 400px;
+    height: 390px;
     padding: 10px;
     border-radius: 30px;
   }
@@ -2560,8 +2560,9 @@ section.aa5 .sub-column {
     margin-right: 15em;
   }
   body.haadphuok-ref .pptx-frame-inside {
-    height: 400px;
-    padding: 10px;
+    height: 350px;
+    padding: -30px;
+    margin-bottom: 20px;
   }
   /* aa.html information 1200*/
   section.activities-page .frame-in-side {
