@@ -23,6 +23,11 @@
   --hovertag: #313131;
 }
 
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .hearder-logo {
   width: 135px;
   height: 50px;
@@ -2118,6 +2123,9 @@ section.aa5 .sub-column {
     display: none;
   }
   /* end of index.html information hearer part 900*/
+  .box-error {
+    margin-bottom: 3.5em;
+  }
   /* index.html information projects part 900px*/
   section.projects-part {
     margin-bottom: 5em;

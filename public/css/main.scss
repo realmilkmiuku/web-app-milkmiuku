@@ -29,6 +29,11 @@
 
 }
 
+.container-fluid {
+    padding-left:0px;
+    padding-right:0px
+}
+
 .hearder-logo {
     width: 135px;
     height: 50px;
@@ -266,7 +271,6 @@ h1.topic {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 3em;
-   
 }
 
 .code {
@@ -2429,10 +2433,9 @@ section.aa5 {
         .rowscontact {
             margin-top: 5px;
         }
-
-
-        
     }
+
+
 } /* end of media 640 px */
 
 @keyframes wavyline {
@@ -2474,7 +2477,6 @@ section.aa5 {
 
     .menu {
         display: none;
-        
     }
 
     nav {
@@ -2488,6 +2490,8 @@ section.aa5 {
         background: none;
 
         margin-bottom: -5px;
+
+        
 
         svg.close {
             display: none;
@@ -2598,6 +2602,10 @@ section.aa5 {
         
     }
     /* end of index.html information hearer part 900*/
+
+    .box-error {
+        margin-bottom: 3.5em;
+    }
 
     /* index.html information projects part 900px*/
     section.projects-part {
