@@ -205,6 +205,14 @@
     background-color: #EE4E2A;
 }
 
+.tag > .alibrary::before { 
+    background-color: #05C99A;
+}
+
+.tag > .aarcht::before { 
+    background-color: #FDFF15;
+}
+
 .tag > .axd::before { 
     background-color: #f50b9a;
 }
@@ -1850,6 +1858,19 @@ section.pj5 {
     
 }
 
+section.pj6 {
+
+    .slide:nth-of-type(1) {
+        top: 0;
+        background:  url('../images/pj6-1.png') ;
+        background-size: cover;
+        background-position-x: 70%;
+        background-position-y: 30%;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
 /* source shine https://codepen.io/anandchakru/pen/qxrVOE */
 @-webkit-keyframes shine {
     0% {
@@ -2648,6 +2669,10 @@ section.aa5 {
             margin-top: 12em;
             margin-bottom: 5em;
             margin-left: -5em;
+        }
+
+        .projects-list {
+            margin-right: -3em;
         }
 
         .previous_btn,
